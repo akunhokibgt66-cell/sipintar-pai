@@ -236,7 +236,6 @@ export default function App() {
           <div className="space-y-1.5">
             <div className="flex justify-between items-center">
               <label className="block text-xs font-bold text-slate-700">Password Admin:</label>
-              <span className="text-[10px] text-slate-500 font-medium">Default: adminmapsi2026</span>
             </div>
             <input
               type="password"
