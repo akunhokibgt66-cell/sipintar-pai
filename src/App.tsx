@@ -148,16 +148,21 @@ export default function App() {
     }
   };
 
-  const handleSecretAdminLogin = (e: React.FormEvent) => {
+  const handleSecretAdminLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setSecretError('');
-    const validUsers = ['admin', 'pembina', 'guru', 'juri'];
-    const validPass = ['adminmapsi2026', 'admin2026', 'admin', 'admin123', '123456'];
+    const pass = secretPassword.trim();
+    let ok = false;
+    try {
+      const { verifyAdminCloud } = await import('@/lib/students.functions');
+      ok = (await verifyAdminCloud({ data: { password: pass } })).ok;
+    } catch {
+      ok = false;
+    }
 
-    if (
-      validUsers.includes(secretUsername.trim().toLowerCase()) &&
-      validPass.includes(secretPassword.trim().toLowerCase())
-    ) {
+    if (ok) {
+      sessionStorage.setItem('mapsi_admin_key', pass);
+      setSecretPassword('');
       sounds.playFanfare();
       confetti({
         particleCount: 70,
@@ -175,7 +180,7 @@ export default function App() {
       setShowAdminSecretModal(false);
       setShowAdminPanel(true);
     } else {
-      setSecretError('Username atau Password Admin salah! (Gunakan: admin / adminmapsi2026)');
+      setSecretError('Kata sandi pembina salah. Hubungi koordinator untuk mendapatkan akses.');
       sounds.playWrong();
     }
   };
