@@ -17,6 +17,7 @@ import { ZakatCalculator } from './components/ZakatCalculator';
 import { AkhlakGlossary } from './components/AkhlakGlossary';
 import { LoginPage } from './components/LoginPage';
 import { AdminPanelModal } from './components/AdminPanelModal';
+import { TutorChat } from './components/TutorChat';
 import { AppUser } from './types';
 import { 
   getOrCreateStudentRecord, 
@@ -733,8 +734,9 @@ export default function App() {
         />
       )}
 
-      {/* Secret Admin Login Modal when inside dashboard */}
       {showAdminSecretModal && renderSecretAdminModal()}
+
+      {currentUser.role === 'siswa' && <TutorChat studentName={currentUser.name} />}
     </div>
   );
 }
