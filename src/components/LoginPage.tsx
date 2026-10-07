@@ -125,7 +125,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
       setShowAdminModal(false);
       onLogin(adminUser);
     } else {
-      setAdminError('Username atau Password Admin salah! (Gunakan: admin / adminmapsi2026)');
+      setAdminError('Kata sandi pembina salah. Hubungi koordinator untuk mendapatkan akses.');
       sounds.playWrong();
     }
   };
