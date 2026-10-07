@@ -100,7 +100,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     const data = getAllStudents();
     setStudents(data);
     setConfig(getCloudSheetConfig());
-    pullStudentsFromCloud('adminmapsi2026').then(ok => {
+    const adminKey = typeof window !== 'undefined' ? sessionStorage.getItem('mapsi_admin_key') || '' : '';
+    pullStudentsFromCloud(adminKey).then(ok => {
       if (ok) setStudents(getAllStudents());
     });
   };

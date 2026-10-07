@@ -17,6 +17,7 @@ import { ZakatCalculator } from './components/ZakatCalculator';
 import { AkhlakGlossary } from './components/AkhlakGlossary';
 import { LoginPage } from './components/LoginPage';
 import { AdminPanelModal } from './components/AdminPanelModal';
+import { TutorChat } from './components/TutorChat';
 import { AppUser } from './types';
 import { 
   getOrCreateStudentRecord, 
@@ -148,16 +149,21 @@ export default function App() {
     }
   };
 
-  const handleSecretAdminLogin = (e: React.FormEvent) => {
+  const handleSecretAdminLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setSecretError('');
-    const validUsers = ['admin', 'pembina', 'guru', 'juri'];
-    const validPass = ['adminmapsi2026', 'admin2026', 'admin', 'admin123', '123456'];
+    const pass = secretPassword.trim();
+    let ok = false;
+    try {
+      const { verifyAdminCloud } = await import('@/lib/students.functions');
+      ok = (await verifyAdminCloud({ data: { password: pass } })).ok;
+    } catch {
+      ok = false;
+    }
 
-    if (
-      validUsers.includes(secretUsername.trim().toLowerCase()) &&
-      validPass.includes(secretPassword.trim().toLowerCase())
-    ) {
+    if (ok) {
+      sessionStorage.setItem('mapsi_admin_key', pass);
+      setSecretPassword('');
       sounds.playFanfare();
       confetti({
         particleCount: 70,
@@ -175,7 +181,7 @@ export default function App() {
       setShowAdminSecretModal(false);
       setShowAdminPanel(true);
     } else {
-      setSecretError('Username atau Password Admin salah! (Gunakan: admin / adminmapsi2026)');
+      setSecretError('Kata sandi pembina salah. Hubungi koordinator untuk mendapatkan akses.');
       sounds.playWrong();
     }
   };
@@ -231,7 +237,6 @@ export default function App() {
           <div className="space-y-1.5">
             <div className="flex justify-between items-center">
               <label className="block text-xs font-bold text-slate-700">Password Admin:</label>
-              <span className="text-[10px] text-slate-500 font-medium">Default: adminmapsi2026</span>
             </div>
             <input
               type="password"
@@ -729,8 +734,9 @@ export default function App() {
         />
       )}
 
-      {/* Secret Admin Login Modal when inside dashboard */}
       {showAdminSecretModal && renderSecretAdminModal()}
+
+      {currentUser.role === 'siswa' && <TutorChat studentName={currentUser.name} />}
     </div>
   );
 }
