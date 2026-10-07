@@ -42,7 +42,8 @@ import {
   copyStudentsForSpreadsheet,
   getGoogleAppsScriptTemplate,
   seedInitialDemoStudents,
-  updateStudentProgress
+  updateStudentProgress,
+  pullStudentsFromCloud
 } from '../services/cloudSheetService';
 
 interface AdminPanelModalProps {
@@ -99,6 +100,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     const data = getAllStudents();
     setStudents(data);
     setConfig(getCloudSheetConfig());
+    pullStudentsFromCloud('adminmapsi2026').then(ok => {
+      if (ok) setStudents(getAllStudents());
+    });
   };
 
   useEffect(() => {
