@@ -202,6 +202,77 @@ const triggerAutoSync = (studentsToSync: StudentRecord[]) => {
   }
 };
 
+// Sync a student login event directly to the CloudSheet webhook (Google Apps Script).
+// Called right after a student submits the login form so logins from HP appear
+// instantly in the spreadsheet. Never blocks the login flow: failures are only logged.
+export const syncLoginToCloudSheet = async (
+  name: string,
+  kelas: string,
+  school: string = 'SD Negeri Kauman 01'
+): Promise<{ success: boolean; message: string }> => {
+  const cfg = getCloudSheetConfig();
+  if (!cfg.webhookUrl || !cfg.webhookUrl.trim()) {
+    return {
+      success: false,
+      message: 'URL Webhook Google Apps Script belum diisi di pengaturan CloudSheet!'
+    };
+  }
+
+  // Make sure the student record exists / is refreshed locally first
+  const record = getOrCreateStudentRecord(name, kelas, school);
+  const loginTime = new Date().toISOString();
+
+  const payload = {
+    event: 'login',
+    timestamp: loginTime,
+    source: 'Sahabat_MAPSI_Web_App',
+    count: 1,
+    students: [
+      {
+        id: record.id,
+        nama: record.name,
+        kelas: record.kelas,
+        sekolah: record.school,
+        totalXp: record.xp,
+        materiSelesai: `${record.completedMateriCount}/72`,
+        persenMateri: `${Math.round((record.completedMateriCount / 72) * 100)}%`,
+        skorCbt: record.lastCbtScore !== null ? `${record.lastCbtScore}/100` : 'Belum Ujian',
+        latihanZakat: `${record.zakatDoneCount} Kasus`,
+        kuisAkhlak: `${record.akhlakQuizCount} Kuis`,
+        terakhirAktif: new Date(loginTime).toLocaleString('id-ID'),
+        status: 'Aktif'
+      }
+    ]
+  };
+
+  try {
+    // mode: 'no-cors' + text/plain is the safe pattern for Google Apps Script Web Apps
+    await fetch(cfg.webhookUrl.trim(), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload),
+      mode: 'no-cors'
+    });
+
+    cfg.lastSyncTime = loginTime;
+    saveCloudSheetConfig(cfg);
+
+    return {
+      success: true,
+      message: `Login ${record.name} berhasil disinkronkan ke CloudSheet!`
+    };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    console.warn('[CloudSheet] Gagal sinkron login:', errMsg);
+    return {
+      success: false,
+      message: `Gagal mengirim login ke webhook: ${errMsg}`
+    };
+  }
+};
+
 // Seed initial realistic student data if roster is empty
 export const seedInitialDemoStudents = (): void => {
   const existing = getAllStudents();

@@ -21,7 +21,8 @@ import { AppUser } from './types';
 import { 
   getOrCreateStudentRecord, 
   updateStudentProgress, 
-  getAllStudents 
+  getAllStudents,
+  syncLoginToCloudSheet
 } from './services/cloudSheetService';
 import { 
   BookOpen, 
@@ -129,6 +130,13 @@ export default function App() {
       if (record.xp && record.xp > xp) {
         setXp(record.xp);
       }
+      // Kirim event login ke CloudSheet (Google Apps Script Webhook) agar
+      // login dari HP langsung terdeteksi di spreadsheet pembina.
+      syncLoginToCloudSheet(
+        user.name,
+        user.kelas,
+        user.school || 'SD Negeri Kauman 01'
+      ).catch((err) => console.warn('[CloudSheet] sync login gagal:', err));
     }
   };
 
