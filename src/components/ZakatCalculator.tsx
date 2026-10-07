@@ -54,14 +54,14 @@ export const ZakatCalculator: React.FC<ZakatCalculatorProps> = ({ onEarnXp }) =>
   const [dagangKas, setDagangKas] = useState(20000000);
   const [dagangUtang, setDagangUtang] = useState(30000000);
 
-  const currentProblem: ZakatProblem = zakatProblemsData[currentProblemIdx];
+  const currentProblem: ZakatProblem = zakatProblemsData[currentProblemIdx]!;
 
   const handleSelectOption = (idx: number) => {
     if (isAnswered) return;
     setSelectedOptionIdx(idx);
     setIsAnswered(true);
 
-    const isCorrect = currentProblem.pilihanOpsi[idx].isCorrect;
+    const isCorrect = currentProblem.pilihanOpsi[idx]!.isCorrect;
     if (isCorrect) {
       sounds.playCorrect();
       setScoreCount(s => s + 1);
@@ -219,12 +219,12 @@ export const ZakatCalculator: React.FC<ZakatCalculatorProps> = ({ onEarnXp }) =>
           {/* Pembahasan & Langkah Hitung */}
           {isAnswered && (
             <div className={`p-5 rounded-2xl border animate-in fade-in duration-200 space-y-3 ${
-              selectedOptionIdx !== null && currentProblem.pilihanOpsi[selectedOptionIdx].isCorrect
+              selectedOptionIdx !== null && currentProblem.pilihanOpsi[selectedOptionIdx]!.isCorrect
                 ? 'bg-emerald-50 border-emerald-300 text-emerald-950'
                 : 'bg-rose-50 border-rose-300 text-rose-950'
             }`}>
               <div className="flex items-center gap-2 font-black text-sm">
-                {selectedOptionIdx !== null && currentProblem.pilihanOpsi[selectedOptionIdx].isCorrect ? (
+                {selectedOptionIdx !== null && currentProblem.pilihanOpsi[selectedOptionIdx]!.isCorrect ? (
                   <>
                     <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                     <span>Perhitunganmu Tepat! (+25 XP)</span>

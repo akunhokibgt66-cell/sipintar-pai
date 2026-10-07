@@ -124,7 +124,7 @@ export const updateStudentProgress = (
   );
 
   if (index !== -1) {
-    students[index] = {
+    students[index] = Object.assign({}, students[index], updates, {
       ...students[index],
       ...updates,
       lastActive: new Date().toISOString(),

@@ -33,7 +33,7 @@ export const TransliterasiTrainer: React.FC<TransliterasiTrainerProps> = ({ onEa
     item.arab.includes(searchFilter)
   );
 
-  const currentPractice: TransliterasiPractice = transliterasiPractices[practiceIdx];
+  const currentPractice: TransliterasiPractice = transliterasiPractices[practiceIdx]!;
 
   const handleInsertChar = (ch: string) => {
     setUserAnswer(prev => prev + ch);

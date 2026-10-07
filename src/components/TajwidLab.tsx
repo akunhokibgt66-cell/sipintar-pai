@@ -29,7 +29,7 @@ export const TajwidLab: React.FC<TajwidLabProps> = ({ onEarnXp }) => {
     ? tajwidSamples 
     : tajwidSamples.filter(s => s.kategori === filterCategory);
 
-  const currentSample: TajwidSample = filteredSamples[currentIndex] || filteredSamples[0];
+  const currentSample: TajwidSample = filteredSamples[currentIndex] ?? filteredSamples[0]!;
 
   const handleSelectOption = (opt: string) => {
     if (hasAnswered) return;

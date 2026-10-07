@@ -23,13 +23,13 @@ export const WigginsChallenge: React.FC<WigginsChallengeProps> = ({ onEarnXp }) 
   const [chosenOptionIdx, setChosenOptionIdx] = useState<number | null>(null);
   const [answeredCases, setAnsweredCases] = useState<{ [caseId: string]: boolean }>({});
 
-  const currentCase: WigginsCase = wigginsCases[selectedCaseIdx];
+  const currentCase: WigginsCase = wigginsCases[selectedCaseIdx]!;
 
   const handleSelectOption = (idx: number) => {
     if (chosenOptionIdx !== null) return;
     setChosenOptionIdx(idx);
 
-    const isBest = currentCase.options[idx].isBest;
+    const isBest = currentCase.options[idx]!.isBest;
     if (isBest) {
       sounds.playCorrect();
       onEarnXp(25);
