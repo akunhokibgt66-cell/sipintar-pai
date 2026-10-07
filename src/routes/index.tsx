@@ -1,24 +1,40 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, ClientOnly } from "@tanstack/react-router";
+import App from "../App";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Sahabat MAPSI - Belajar PAI & BTQ Interaktif" },
+      {
+        name: "description",
+        content:
+          "Platform pembelajaran interaktif PAI dan BTQ sesuai kisi-kisi resmi lomba MAPSI: 6 ruang lingkup, 72 materi, kuis CBT, latihan tajwid, hafalan ayat, dan simulasi lomba.",
+      },
+      { property: "og:title", content: "Sahabat MAPSI - Belajar PAI & BTQ Interaktif" },
+      {
+        property: "og:description",
+        content:
+          "Platform pembelajaran interaktif PAI dan BTQ sesuai kisi-kisi resmi lomba MAPSI: 6 ruang lingkup, 72 materi, kuis CBT, latihan tajwid, hafalan ayat, dan simulasi lomba.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
+    <ClientOnly
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-emerald-950">
+          <span className="text-emerald-200 text-sm font-bold animate-pulse">
+            Memuat Sahabat MAPSI...
+          </span>
+        </div>
+      }
     >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+      <App />
+    </ClientOnly>
   );
 }
