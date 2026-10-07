@@ -8,3 +8,9 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+# AGENTS.md
+
+- The app is the imported "Sahabat MAPSI" SPA: `src/App.tsx` holds all state and is rendered from `src/routes/index.tsx` inside `<ClientOnly>` because it reads localStorage in useState initializers (avoids SSR hydration mismatch).
+- Student data and Google Apps Script webhook sync live in `src/services/cloudSheetService.ts` (localStorage + BroadcastChannel, no backend). `syncLoginToCloudSheet` is called from `handleLogin` in App.tsx for role `siswa` only; it must never block login (silent-fail with console.warn).
+- tsconfig has `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` disabled because the imported app code was written without them; do not re-enable without fixing the component files.
