@@ -90,6 +90,7 @@ export const getOrCreateStudentRecord = (
     existing.lastActive = new Date().toISOString();
     existing.status = 'Aktif';
     saveAllStudents(students);
+    pushStudentsToCloud([existing]);
     return existing;
   }
 
@@ -194,7 +195,36 @@ export const sendToWebhook = async (
   }
 };
 
+// Push records to the central Lovable Cloud database (all devices share it).
+export const pushStudentsToCloud = (records: StudentRecord[]) => {
+  if (typeof window === 'undefined') return;
+  import('@/lib/students.functions')
+    .then(({ upsertStudentCloud }) =>
+      Promise.all(records.map(r => upsertStudentCloud({ data: { ...r, cbtDate: r.cbtDate ?? null } })))
+    )
+    .catch(err => console.warn('[Cloud] Gagal menyimpan data siswa:', err));
+};
+
+// Fetch the central roster (teacher password required) and merge into local storage.
+export const pullStudentsFromCloud = async (password: string): Promise<boolean> => {
+  try {
+    const { listStudentsCloud } = await import('@/lib/students.functions');
+    const res = await listStudentsCloud({ data: { password } });
+    if (!res.ok) return false;
+    const local = getAllStudents();
+    const map = new Map(local.map(s => [s.id, s]));
+    res.students.forEach(s => map.set(s.id, { ...s, cbtDate: s.cbtDate ?? undefined } as StudentRecord));
+    const merged = Array.from(map.values()).sort((a, b) => b.lastActive.localeCompare(a.lastActive));
+    if (typeof window !== 'undefined') localStorage.setItem(STORAGE_KEY_STUDENTS, JSON.stringify(merged));
+    return true;
+  } catch (err) {
+    console.warn('[Cloud] Gagal memuat data siswa:', err);
+    return false;
+  }
+};
+
 const triggerAutoSync = (studentsToSync: StudentRecord[]) => {
+  pushStudentsToCloud(studentsToSync);
   const cfg = getCloudSheetConfig();
   if (cfg.autoSync && cfg.webhookUrl) {
     sendToWebhook(studentsToSync, cfg.webhookUrl).catch(() => {});
