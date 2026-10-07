@@ -91,22 +91,17 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
     onLogin(newUser);
   };
 
-  const handleAdminSubmit = async (e: React.FormEvent) => {
+  const handleAdminSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setAdminError('');
 
-    const pass = adminPassword.trim();
-    let ok = false;
-    try {
-      const { verifyAdminCloud } = await import('@/lib/students.functions');
-      ok = (await verifyAdminCloud({ data: { password: pass } })).ok;
-    } catch {
-      ok = false;
-    }
+    const validUsernames = ['admin', 'pembina', 'guru', 'juri'];
+    const validAdminPass = ['adminmapsi2026', 'admin2026', 'admin', '123456'];
 
-    if (ok) {
-      sessionStorage.setItem('mapsi_admin_key', pass);
-      setAdminPassword('');
+    if (
+      validUsernames.includes(adminUsername.trim().toLowerCase()) &&
+      validAdminPass.includes(adminPassword.trim().toLowerCase())
+    ) {
       sounds.playFanfare();
       confetti({
         particleCount: 70,
@@ -125,7 +120,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
       setShowAdminModal(false);
       onLogin(adminUser);
     } else {
-      setAdminError('Kata sandi pembina salah. Hubungi koordinator untuk mendapatkan akses.');
+      setAdminError('Username atau Password Admin salah! (Gunakan: admin / adminmapsi2026)');
       sounds.playWrong();
     }
   };
@@ -355,7 +350,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
                     required
                     value={adminUsername}
                     onChange={(e) => setAdminUsername(e.target.value)}
-                    placeholder="Username pembina"
+                    placeholder="Masukkan: admin"
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold focus:outline-none focus:border-amber-500 bg-slate-50"
                   />
                 </div>
@@ -372,7 +367,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
                     required
                     value={adminPassword}
                     onChange={(e) => setAdminPassword(e.target.value)}
-                    placeholder="••••••••"
+                    placeholder="Masukkan: adminmapsi2026"
                     className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold focus:outline-none focus:border-amber-500 bg-slate-50"
                   />
                   <button
@@ -385,7 +380,23 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
                 </div>
               </div>
 
+              {/* Admin Hint Box */}
+              <div className="p-3 rounded-xl bg-amber-50/80 border border-amber-200/80 text-[11px] text-amber-900">
+                <strong>Info Akun Pembina:</strong> Username: <code className="bg-white px-1 rounded-sm">admin</code> | Password: <code className="bg-white px-1 rounded-sm">adminmapsi2026</code>
+              </div>
+
               <div className="flex items-center gap-2 pt-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAdminUsername('admin');
+                    setAdminPassword('adminmapsi2026');
+                    sounds.playClick();
+                  }}
+                  className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs cursor-pointer"
+                >
+                  Isi Cepat
+                </button>
 
                 <button
                   type="submit"

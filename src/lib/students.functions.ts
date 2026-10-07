@@ -46,25 +46,12 @@ export const upsertStudentCloud = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
-function isValidAdminPassword(password: string): boolean {
-  const secret = process.env["ADMIN_PASSWORD"];
-  if (!secret || secret.length < 6) return false;
-  if (password.length !== secret.length) return false;
-  let diff = 0;
-  for (let i = 0; i < secret.length; i++) diff |= secret.charCodeAt(i) ^ password.charCodeAt(i);
-  return diff === 0;
-}
-
-// Verifies the teacher password against the server-held ADMIN_PASSWORD secret.
-export const verifyAdminCloud = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => z.object({ password: z.string().max(200) }).parse(d))
-  .handler(async ({ data }) => ({ ok: isValidAdminPassword(data.password) }));
-
 // Reading the full roster requires the teacher (pembina) password.
 export const listStudentsCloud = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => z.object({ password: z.string().max(200) }).parse(d))
+  .inputValidator((d: unknown) => z.object({ password: z.string().max(100) }).parse(d))
   .handler(async ({ data }) => {
-    if (!isValidAdminPassword(data.password)) return { ok: false, students: [] as CloudStudent[] };
+    const valid = ["adminmapsi2026", "admin2026"];
+    if (!valid.includes(data.password)) return { ok: false, students: [] as CloudStudent[] };
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data: rows, error } = await supabaseAdmin
       .from("students")
