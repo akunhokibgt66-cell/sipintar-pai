@@ -124,14 +124,13 @@ export const updateStudentProgress = (
   );
 
   if (index !== -1) {
-    students[index] = Object.assign({}, students[index], updates, {
-      ...students[index],
-      ...updates,
+    const updated = Object.assign({}, students[index], updates, {
       lastActive: new Date().toISOString(),
-      status: 'Aktif'
-    };
+      status: 'Aktif' as const
+    });
+    students[index] = updated;
     saveAllStudents(students);
-    triggerAutoSync([students[index]]);
+    triggerAutoSync([updated]);
   }
 };
 
