@@ -14,7 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      students: {
+        Row: {
+          akhlak_quiz_count: number
+          cbt_date: string | null
+          completed_materi_count: number
+          created_at: string
+          id: string
+          kelas: string
+          last_active: string
+          last_cbt_score: number | null
+          name: string
+          school: string
+          status: string
+          total_materi_target: number
+          xp: number
+          zakat_done_count: number
+        }
+        Insert: {
+          akhlak_quiz_count?: number
+          cbt_date?: string | null
+          completed_materi_count?: number
+          created_at?: string
+          id: string
+          kelas?: string
+          last_active?: string
+          last_cbt_score?: number | null
+          name: string
+          school?: string
+          status?: string
+          total_materi_target?: number
+          xp?: number
+          zakat_done_count?: number
+        }
+        Update: {
+          akhlak_quiz_count?: number
+          cbt_date?: string | null
+          completed_materi_count?: number
+          created_at?: string
+          id?: string
+          kelas?: string
+          last_active?: string
+          last_cbt_score?: number | null
+          name?: string
+          school?: string
+          status?: string
+          total_materi_target?: number
+          xp?: number
+          zakat_done_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
