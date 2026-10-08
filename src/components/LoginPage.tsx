@@ -277,25 +277,12 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onAdminTrigger })
             ⚡ Isi Data Contoh Otomatis
           </button>
 
-          {/* Discreet Admin Link */}
-          <button
-            type="button"
-            onClick={() => setShowAdminModal(true)}
-            className="text-slate-500 hover:text-slate-700 text-[11px] font-medium flex items-center gap-1 cursor-pointer"
-            title="Tekan Alt + Shift + A di keyboard"
-          >
-            <Lock className="w-3 h-3" />
-            <span>Guru/Pembina (Alt+Shift+A)</span>
-          </button>
         </div>
       </div>
 
       {/* Footer Info */}
       <div className="mt-6 text-center text-xs text-emerald-200/80 space-y-1 max-w-sm">
         <p>Aplikasi Media Belajar Mandiri PAI-BTQ MAPSI 2026</p>
-        <p className="text-[11px] text-emerald-300/60">
-          Tip Pintar: Tekan <strong>Alt + Shift + A</strong> kapan saja untuk membuka Login Pembina.
-        </p>
       </div>
 
       {/* HIDDEN ADMIN LOGIN MODAL */}

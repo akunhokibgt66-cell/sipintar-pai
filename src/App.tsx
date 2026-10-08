@@ -8,6 +8,7 @@ import { MateriItem, RuangLingkupId } from './types';
 import { Navbar } from './components/Navbar';
 import { ScopeCard } from './components/ScopeCard';
 import { MateriModal } from './components/MateriModal';
+import { TanyaSahabatPAI } from './components/TanyaSahabatPAI';
 import { CbtExamModal } from './components/CbtExamModal';
 import { TajwidLab } from './components/TajwidLab';
 import { WigginsChallenge } from './components/WigginsChallenge';
@@ -678,6 +679,7 @@ export default function App() {
           <p className="text-[11px] text-slate-500">
             © 2026 Sahabat MAPSI • Siap Berprestasi Menjadi Juara!
           </p>
+          {currentUser?.role === 'admin' && (
           <button
             onClick={() => {
               if (currentUser?.role === 'admin') {
@@ -692,8 +694,11 @@ export default function App() {
             <Lock className="w-3 h-3" />
             <span>Login Pembina (Alt+Shift+A)</span>
           </button>
+          )}
         </div>
       </footer>
+
+      <TanyaSahabatPAI />
 
       {/* Detail Materi Modal Reader */}
       {selectedMateri && (
