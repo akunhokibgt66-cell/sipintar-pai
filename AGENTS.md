@@ -15,3 +15,5 @@
 - Student data and Google Apps Script webhook sync live in `src/services/cloudSheetService.ts` (localStorage + BroadcastChannel, no backend). `syncLoginToCloudSheet` is called from `handleLogin` in App.tsx for role `siswa` only; it must never block login (silent-fail with console.warn).
 - tsconfig has `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` disabled because the imported app code was written without them; do not re-enable without fixing the component files.
 - Student records are also stored centrally in Lovable Cloud table `students` via `src/lib/students.functions.ts` (public validated upsert; roster read requires pembina password). `triggerAutoSync`/`getOrCreateStudentRecord` push to Cloud; AdminPanelModal pulls on open. localStorage stays as offline cache.
+- "Tanya Sahabat PAI" chat: `src/components/TanyaSahabatPAI.tsx` streams plain text from server route `src/routes/api/chat.ts` (Lovable AI Gateway, Responses API); no chat history is stored so the feature stays simple and private.
+- Per-materi evaluation quiz (`LatihanMateri.tsx`) reuses `quizBank` (materi match first, then same scope) so it works offline without AI.
