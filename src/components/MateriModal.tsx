@@ -66,6 +66,7 @@ export const MateriModal: React.FC<MateriModalProps> = ({
   const handleMarkComplete = () => {
     if (!isCompleted) {
       onCompleteMateri(materi.id);
+      setActiveSubTab('latihan');
       sounds.playCorrect();
       confetti({
         particleCount: 50,
