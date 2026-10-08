@@ -17,6 +17,7 @@ import {
 import { MateriItem, WigginsFacet } from '../types';
 import { sounds } from '../utils/audio';
 import confetti from 'canvas-confetti';
+import { LatihanMateri } from './LatihanMateri';
 
 interface MateriModalProps {
   materi: MateriItem | null;
@@ -39,7 +40,7 @@ export const MateriModal: React.FC<MateriModalProps> = ({
   allScopeMateri,
   onSelectMateri
 }) => {
-  const [activeSubTab, setActiveSubTab] = useState<'konten' | 'ayat' | 'poin' | 'wiggins' | 'minikuis'>('konten');
+  const [activeSubTab, setActiveSubTab] = useState<'konten' | 'ayat' | 'poin' | 'wiggins' | 'minikuis' | 'latihan'>('konten');
   const [selectedMiniAnswer, setSelectedMiniAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -196,7 +197,19 @@ export const MateriModal: React.FC<MateriModalProps> = ({
             >
               💡 Aspek Wiggins & McTighe
             </button>
+            <button
+              onClick={() => setActiveSubTab('latihan')}
+              className={`px-3 py-1.5 rounded-xl whitespace-nowrap cursor-pointer transition-all ${
+                activeSubTab === 'latihan'
+                  ? 'bg-white text-emerald-900 shadow-sm font-bold'
+                  : 'bg-white/10 text-emerald-50 hover:bg-white/20'
+              }`}
+            >
+              📝 Latihan Soal
+            </button>
           </div>
+
+          {/* Sub Navigation Tabs END */}
         </div>
 
         {/* Modal Scrollable Body */}
@@ -358,9 +371,11 @@ export const MateriModal: React.FC<MateriModalProps> = ({
               </div>
             </div>
           )}
+          {activeSubTab === 'latihan' && <LatihanMateri key={materi.id} materi={materi} />}
         </div>
 
         {/* Modal Footer Controls */}
+
         <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3 shrink-0">
           <div className="flex items-center gap-2">
             {prevMateri && (
