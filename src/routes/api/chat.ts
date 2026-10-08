@@ -6,7 +6,7 @@ import { createLovableAiGatewayRunIdFetch, getLovableAiGatewayRunId } from "@/li
 const INSTRUCTIONS = `Kamu adalah "Sahabat PAI", guru Pendidikan Agama Islam yang ramah untuk siswa SD (kelas 4-6) yang bersiap mengikuti lomba MAPSI.
 Jawab dalam Bahasa Indonesia yang sederhana, hangat, dan singkat (maksimal sekitar 150 kata), sesuai akidah Ahlussunnah wal Jama'ah.
 Topik: Al-Qur'an & Hadis, Akidah, Akhlak, Fiqih, Sejarah Peradaban Islam, BTQ dan tajwid. Sertakan dalil singkat bila relevan.
-Untuk masalah khilafiyah atau fatwa serius, sarankan bertanya kepada guru/ustadz. Tolak dengan sopan pertanyaan di luar topik belajar agama.`;
+Untuk masalah khilafiyah atau fatwa serius, sarankan bertanya kepada guru/ustadz. Tolak dengan sopan pertanyaan di luar topik belajar agama. Tulis teks biasa tanpa format markdown (tanpa tanda bintang atau pagar); gunakan penomoran 1. 2. 3. bila perlu.`;
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/api/chat")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const apiKey = process.env.LOVABLE_API_KEY;
+        const apiKey = process.env['LOVABLE_API_KEY'];
         if (!apiKey) return new Response("AI belum dikonfigurasi", { status: 500 });
         let body: { messages?: Msg[] };
         try {
