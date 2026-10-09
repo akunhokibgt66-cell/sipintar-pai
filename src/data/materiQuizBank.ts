@@ -3531,22 +3531,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Mudah"
   },
   {
-    "id": "mq-fiqih-8-1",
-    "scopeId": "fiqih",
-    "materiId": "fiqih-8",
-    "soal": "Makna yang paling tepat dari kata zikir adalah...",
-    "pilihan": [
-      "Mengingat atau menyebut nama Allah SWT",
-      "Berdoa dan memohon kepada Allah SWT",
-      "Menyanyikan pujian untuk Allah SWT",
-      "Melakukan ibadah salat berjamaah"
-    ],
-    "kunciJawaban": "A",
-    "pembahasan": "Zikir berasal dari kata dzakara yang berarti mengingat atau menyebut.",
-    "wigginsFacet": "Penjelasan",
-    "level": "Mudah"
-  },
-  {
     "id": "mq-fiqih-8-2",
     "scopeId": "fiqih",
     "materiId": "fiqih-8",
