@@ -1,6 +1,6 @@
 import { QuizQuestion } from '../types';
 
-// Bank soal khusus per materi (5 soal tiap materi).
+// Bank soal khusus per materi.
 export const materiQuizBank: QuizQuestion[] = [
   {
     "id": "mq-quran-1-1",
@@ -433,21 +433,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "pembahasan": "Abrahah iri karena bangsa Arab lebih memuliakan Ka'bah daripada gereja Al-Qullais yang ia bangun di Yaman.",
     "wigginsFacet": "Interpretasi",
     "level": "Sedang"
-  },
-  {
-    "id": "mq-quran-6-3",
-    "scopeId": "quran",
-    "materiId": "quran-6",
-    "soal": "Allah SWT menunjukkan kekuasaan-Nya dengan menghancurkan pasukan Abrahah menggunakan burung Ababil. Jika kita menghadapi kesulitan besar seperti tentara Abrahah, pelajaran apa yang bisa kita ambil dari peristiwa ini?",
-    "pilihan": [
-      "Kita harus selalu membawa batu untuk melindungi diri.",
-      "Kita harus pasrah saja dan tidak melakukan apa-apa.",
-      "Kita harus yakin pertolongan Allah itu nyata bagi hamba-Nya yang beriman.",
-      "Kita harus selalu meminta bantuan kepada burung."
-    ],
-    "pembahasan": "Peristiwa ini mengajarkan kita untuk selalu percaya dan berserah diri kepada Allah karena pertolongan-Nya pasti datang.",
-    "wigginsFacet": "Aplikasi",
-    "level": "HOTS"
   },
   {
     "id": "mq-quran-6-4",
@@ -978,66 +963,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Mudah"
   },
   {
-    "id": "mq-quran-13-2",
-    "scopeId": "quran",
-    "materiId": "quran-13",
-    "soal": "Salah satu prinsip penting dari 'kalimatun sawa'' yang diajarkan dalam Surah Ali ‘Imrān ayat 64 adalah kita tidak boleh menjadikan sesama manusia sebagai tuhan tandingan. Contoh perbuatan yang sesuai dengan larangan ini adalah…",
-    "pilihan": [
-      "Mengikuti nasihat guru mengaji",
-      "Menghormati orang tua kita",
-      "Percaya bahwa hanya Allah yang berhak diibadahi",
-      "Menganggap perkataan pemimpin selalu benar tanpa dasar"
-    ],
-    "pembahasan": "Percaya hanya Allah yang berhak diibadahi adalah prinsip tauhid, sedangkan menjadikan perkataan pemimpin sebagai kebenaran mutlak adalah contoh menjadikan manusia sebagai tuhan tandingan.",
-    "wigginsFacet": "Aplikasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-quran-13-3",
-    "scopeId": "quran",
-    "materiId": "quran-13",
-    "soal": "Nabi Muhammad SAW menggunakan Surah Ali ‘Imrān ayat 64 saat berdiplomasi dengan para raja. Jika kita berada dalam situasi di mana harus menjelaskan Islam kepada teman yang berbeda agama, sikap apa yang paling tepat berdasarkan ayat ini?",
-    "pilihan": [
-      "Memaksa teman untuk memeluk Islam",
-      "Mengajak teman berdiskusi tentang kesamaan dalam keyakinan kepada Tuhan",
-      "Menghindari teman yang berbeda agama",
-      "Mengejek keyakinan teman karena tidak sama"
-    ],
-    "pembahasan": "Ayat ini adalah dalil utama diplomasi dan dialog, mengajak kepada titik temu yang adil dengan sopan dan logis.",
-    "wigginsFacet": "Perspektif",
-    "level": "HOTS"
-  },
-  {
-    "id": "mq-quran-13-4",
-    "scopeId": "quran",
-    "materiId": "quran-13",
-    "soal": "Mengapa Nabi Muhammad SAW mencantumkan Surah Ali ‘Imrān ayat 64 dalam surat dakwah kepada raja-raja seperti Kaisar Heraclius?",
-    "pilihan": [
-      "Sebagai tanda kekuasaan Nabi Muhammad SAW",
-      "Untuk menunjukkan bahwa Islam lebih baik dari agama lain",
-      "Sebagai ajakan diplomasi menuju prinsip dasar yang sama dan adil",
-      "Agar raja-raja takut dan menyerah kepada Islam"
-    ],
-    "pembahasan": "Ayat ini adalah dalil utama diplomasi dan dialog lintas agama, menyeru kepada kalimatun sawa' atau titik temu yang adil.",
-    "wigginsFacet": "Interpretasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-quran-13-5",
-    "scopeId": "quran",
-    "materiId": "quran-13",
-    "soal": "Salah satu poin penting dari Surah Ali ‘Imrān ayat 64 adalah melarang 'kultus individu berlebihan terhadap pemimpin atau tokoh agama'. Apa maksud dari larangan ini?",
-    "pilihan": [
-      "Tidak boleh menghormati ulama atau guru",
-      "Tidak boleh percaya sepenuhnya pada apa yang diucapkan manusia tanpa dasar Al-Qur'an dan Sunnah",
-      "Melarang adanya pemimpin agama sama sekali",
-      "Hanya boleh mengikuti ajaran agama sendiri"
-    ],
-    "pembahasan": "Larangan kultus individu berarti tidak menjadikan manusia sebagai tuhan tandingan yang diyakini maksum tanpa batas, sehingga perkataannya harus dipertimbangkan dengan ajaran Allah.",
-    "wigginsFacet": "Penjelasan",
-    "level": "Sedang"
-  },
-  {
     "id": "mq-quran-14-1",
     "scopeId": "quran",
     "materiId": "quran-14",
@@ -1083,21 +1008,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "kunciJawaban": 1,
     "pembahasan": "Prinsip 'Lā ikrāha fid-dīn' mengajarkan untuk tidak memaksa, melainkan memberikan contoh baik dan penjelasan.",
     "wigginsFacet": "Aplikasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-quran-14-4",
-    "scopeId": "quran",
-    "materiId": "quran-14",
-    "soal": "Apa yang dimaksud dengan 'Thaghut' menurut Surah Al-Baqarah ayat 256?",
-    "pilihan": [
-      "Setiap hal yang baik di dunia",
-      "Segala sesuatu yang disembah selain Allah dan melampaui batas kewajaran",
-      "Hanya berhala-berhala di zaman dahulu",
-      "Orang-orang yang memeluk agama selain Islam"
-    ],
-    "pembahasan": "Thaghut adalah segala bentuk tandingan atau yang disembah selain Allah, serta melampaui batas kebenaran.",
-    "wigginsFacet": "Penjelasan",
     "level": "Sedang"
   },
   {
@@ -2045,21 +1955,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "HOTS"
   },
   {
-    "id": "mq-akhlak-4-4",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-4",
-    "soal": "Di antara kewajiban berikut, manakah yang BUKAN termasuk cara berbakti kepada orang tua yang sudah meninggal dunia?",
-    "pilihan": [
-      "Mendoakan agar orang tua diampuni dosanya.",
-      "Menyambung tali silaturahmi dengan teman-teman dekat orang tua.",
-      "Bersedekah atas nama orang tua yang telah wafat.",
-      "Membangunkan makam orang tua semewah mungkin."
-    ],
-    "pembahasan": "Berbakti kepada orang tua setelah wafat meliputi mendoakan, menyambung silaturahmi teman mereka, dan bersedekah atas nama mereka, bukan membangun makam mewah.",
-    "wigginsFacet": "Penjelasan",
-    "level": "Sedang"
-  },
-  {
     "id": "mq-akhlak-4-5",
     "scopeId": "akhlak",
     "materiId": "akhlak-4",
@@ -2556,86 +2451,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "HOTS"
   },
   {
-    "id": "mq-akhlak-11-1",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-11",
-    "soal": "Ketika kita melihat pemandangan alam yang sangat indah dan menakjubkan, kalimah tayyibah apa yang tepat kita ucapkan untuk mengagungkan Allah?",
-    "pilihan": [
-      "A. Bismillāhir-raḥmānir-raḥīm",
-      "B. Subḥānallāh",
-      "C. Astaghfirullāh al-‘Aẓīm",
-      "D. Innā lillāhi wa innā ilaihi rāji‘ūn"
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Tasbīḥ (Subḥānallāh) diucapkan untuk menyucikan Allah saat melihat sesuatu yang menakjubkan atau ganjil.",
-    "wigginsFacet": "Aplikasi",
-    "level": "Mudah"
-  },
-  {
-    "id": "mq-akhlak-11-2",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-11",
-    "soal": "Perhatikan hadis berikut: 'La haula wa la quwwata illa billah adalah simpanan dari simpanan-simpanan surga.' (HR. Bukhari dan Muslim). Mengapa kalimah tayyibah 'Lā ḥaula wa lā quwwata illā billāh' begitu istimewa dan disebut 'simpanan surga'?",
-    "pilihan": [
-      "A. Karena dengan mengucapkannya, kita akan langsung mendapatkan kekayaan duniawi.",
-      "B. Karena kalimat ini menunjukkan bahwa segala kekuatan dan daya upaya hanyalah milik Allah, sehingga menumbuhkan tawakkal yang tinggi.",
-      "C. Karena kalimat ini hanya boleh diucapkan oleh orang yang sudah hafal Al-Qur'an.",
-      "D. Karena kalimat ini sering diucapkan oleh para malaikat saat mendaki langit ketujuh."
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Hauqalah (Lā ḥaula wa lā quwwata illā billāh) adalah simpanan surga karena mengandung penyerahan penuh kepada Allah atas segala daya dan upaya.",
-    "wigginsFacet": "Interpretasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-akhlak-11-3",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-11",
-    "soal": "Fatima berjanji kepada temannya, Aisyah, bahwa dia akan datang ke rumah Aisyah besok untuk bermain bersama. Untuk menunjukkan bahwa dia menyerahkan hasil janji itu kepada kehendak Allah, kalimah tayyibah apa yang sebaiknya diucapkan Fatima?",
-    "pilihan": [
-      "A. Māsya Allāh",
-      "B. Al-ḥamdu lillāh",
-      "C. Insyā Allāh",
-      "D. Allāhu Akbar"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Insyā Allāh diucapkan saat berjanji melakukan sesuatu di masa mendatang, menunjukkan bahwa terjadi atau tidaknya janji itu atas kehendak Allah.",
-    "wigginsFacet": "Aplikasi",
-    "level": "Mudah"
-  },
-  {
-    "id": "mq-akhlak-11-4",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-11",
-    "soal": "Dalam QS. Ibrahim ayat 24, kalimah tayyibah digambarkan seperti pohon yang akarnya menghunjam ke bumi dan cabangnya menjulang ke langit. Apa makna dari perumpamaan ini terhadap kalimah tayyibah dalam kehidupan seorang muslim?",
-    "pilihan": [
-      "A. Kalimah tayyibah harus diucapkan di bawah pohon yang tinggi agar pahalanya berlimpah.",
-      "B. Kalimah tayyibah hanya boleh diucapkan oleh petani yang menanam pohon.",
-      "C. Kalimah tayyibah memiliki dasar keyakinan yang kuat (akar) dan membawa manfaat serta pahala yang tinggi sampai ke langit (cabang).",
-      "D. Kalimah tayyibah membuat orang dapat terbang ke langit seperti burung."
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Perumpamaan ini berarti kalimah tayyibah memiliki fondasi keyakinan yang kokoh dan mendatangkan kebaikan serta keberkahan yang tinggi di sisi Allah.",
-    "wigginsFacet": "Perspektif",
-    "level": "HOTS"
-  },
-  {
-    "id": "mq-akhlak-11-5",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-11",
-    "soal": "Seorang anak muslim bernama Budi baru saja mendengar kabar duka bahwa tetangganya meninggal dunia. Untuk menunjukkan rasa sedih dan menerima takdir Allah, serta mendoakan yang meninggal, kalimah tayyibah apa yang paling tepat diucapkan Budi?",
-    "pilihan": [
-      "A. Lā ilāha illallāh",
-      "B. Innā lillāhi wa innā ilaihi rāji‘ūn",
-      "C. Subḥānallāh",
-      "D. Astaghfirullāh al-‘Aẓīm"
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Tarjī‘ (Innā lillāhi wa innā ilaihi rāji‘ūn) diucapkan saat tertimpa musibah atau mendengar kabar kematian, sebagai bentuk pasrah kepada Allah.",
-    "wigginsFacet": "Empati",
-    "level": "Sedang"
-  },
-  {
     "id": "mq-akhlak-12-1",
     "scopeId": "akhlak",
     "materiId": "akhlak-12",
@@ -2682,21 +2497,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "pembahasan": "Menyemangati teman untuk belajar lebih giat adalah bentuk pertolongan yang benar, sedangkan menyontek dilarang dalam Islam.",
     "wigginsFacet": "Perspektif",
     "level": "HOTS"
-  },
-  {
-    "id": "mq-akhlak-12-4",
-    "scopeId": "akhlak",
-    "materiId": "akhlak-12",
-    "soal": "Pak Budi ikut membersihkan selokan di lingkungannya bersama warga lain. Tindakan Pak Budi ini menunjukkan tolong-menolong dalam bentuk...",
-    "pilihan": [
-      "Tenaga",
-      "Harta",
-      "Ilmu",
-      "Doa"
-    ],
-    "pembahasan": "Ikut membersihkan lingkungan adalah contoh tolong-menolong dengan memberikan tenaga.",
-    "wigginsFacet": "Aplikasi",
-    "level": "Mudah"
   },
   {
     "id": "mq-akhlak-12-5",
@@ -3531,70 +3331,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Mudah"
   },
   {
-    "id": "mq-fiqih-8-2",
-    "scopeId": "fiqih",
-    "materiId": "fiqih-8",
-    "soal": "Apa yang menjadi penawar kegelisahan batin menurut Al-Qur'an surat Ar-Ra'd ayat 28?",
-    "pilihan": [
-      "Mendapatkan banyak harta",
-      "Memiliki banyak teman",
-      "Mengingat Allah SWT",
-      "Berlibur ke tempat indah"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "QS. Ar-Ra'd: 28 menyatakan 'Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram'.",
-    "wigginsFacet": "Interpretasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-fiqih-8-3",
-    "scopeId": "fiqih",
-    "materiId": "fiqih-8",
-    "soal": "Jika ada temanmu yang sedang sedih atau khawatir karena nilai ujiannya kurang baik, sebagai seorang muslim yang memahami keutamaan zikir, nasihat apa yang paling tepat kamu berikan kepadanya?",
-    "pilihan": [
-      "Menyuruhnya untuk tidak belajar lagi karena sudah takdir",
-      "Mengajaknya untuk berzikir agar hatinya menjadi lebih tenang",
-      "Menyarankannya untuk bermain game agar lupa kesedihannya",
-      "Mengatakan bahwa nilai itu tidak penting sama sekali"
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Zikir dapat menenteramkan hati yang gundah, sesuai dengan perintah Allah SWT.",
-    "wigginsFacet": "Aplikasi",
-    "level": "HOTS"
-  },
-  {
-    "id": "mq-fiqih-8-4",
-    "scopeId": "fiqih",
-    "materiId": "fiqih-8",
-    "soal": "Berdasarkan hadis Rasulullah SAW, orang yang berzikir kepada Allah diibaratkan seperti orang...",
-    "pilihan": [
-      "Kuat",
-      "Hidup",
-      "Kaya",
-      "Sabar"
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Hadis menyebutkan orang berzikir diibaratkan orang hidup, dan yang tidak berzikir diibaratkan bangkai/orang mati.",
-    "wigginsFacet": "Penjelasan",
-    "level": "Mudah"
-  },
-  {
-    "id": "mq-fiqih-8-5",
-    "scopeId": "fiqih",
-    "materiId": "fiqih-8",
-    "soal": "Melaksanakan salat lima waktu, menuntut ilmu, dan beramal saleh termasuk dalam bentuk zikir apa?",
-    "pilihan": [
-      "Zikir Lisan",
-      "Zikir Qalbi",
-      "Zikir Amali",
-      "Zikir Harian"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Zikir Amali adalah melaksanakan segala perintah syariat seperti salat, menuntut ilmu, dan beramal saleh.",
-    "wigginsFacet": "Interpretasi",
-    "level": "Sedang"
-  },
-  {
     "id": "mq-fiqih-9-1",
     "scopeId": "fiqih",
     "materiId": "fiqih-9",
@@ -4233,86 +3969,6 @@ export const materiQuizBank: QuizQuestion[] = [
     "pembahasan": "Nabi Syu'aib a.s. diutus kepada kaum Madyan yang memiliki kebiasaan curang dalam timbangan dan takaran. Beliau menyeru mereka untuk berlaku jujur.",
     "wigginsFacet": "Interpretasi",
     "level": "Sedang"
-  },
-  {
-    "id": "mq-spi-4-1",
-    "scopeId": "spi",
-    "materiId": "spi-4",
-    "soal": "Kejadian luar biasa yang diberikan oleh Allah SWT kepada para nabi dan rasul untuk membuktikan kebenaran risalah mereka disebut...",
-    "pilihan": [
-      "A. Karamah",
-      "B. Ma'unah",
-      "C. Mukjizat",
-      "D. Istidraj"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Mukjizat adalah kejadian luar biasa yang khusus diberikan kepada nabi/rasul.",
-    "wigginsFacet": "Penjelasan",
-    "level": "Mudah"
-  },
-  {
-    "id": "mq-spi-4-2",
-    "scopeId": "spi",
-    "materiId": "spi-4",
-    "soal": "Nabi Musa a.s. pernah menunjukkan mukjizat tongkatnya yang berubah menjadi ular besar dan membelah lautan. Jenis mukjizat ini termasuk dalam kategori...",
-    "pilihan": [
-      "A. Mukjizat Maknawi",
-      "B. Mukjizat Ilahiyah",
-      "C. Mukjizat Hissi",
-      "D. Mukjizat Aqli"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Mukjizat hissi adalah mukjizat yang dapat disaksikan langsung oleh panca indera pada masanya, seperti kejadian tongkat Nabi Musa.",
-    "wigginsFacet": "Interpretasi",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-spi-4-3",
-    "scopeId": "spi",
-    "materiId": "spi-4",
-    "soal": "Ali adalah seorang anak yang shaleh dan rajin beribadah. Suatu hari, saat ia tersesat di hutan, tiba-tiba ada cahaya terang yang menunjukkan jalan keluar baginya. Peristiwa luar biasa yang dialami Ali ini paling tepat disebut...",
-    "pilihan": [
-      "A. Mukjizat",
-      "B. Karamah",
-      "C. Ma'unah",
-      "D. Sihir"
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Karamah adalah kejadian luar biasa yang diberikan kepada wali Allah atau hamba saleh non-nabi, seperti Ali dalam cerita ini.",
-    "wigginsFacet": "Aplikasi",
-    "level": "HOTS"
-  },
-  {
-    "id": "mq-spi-4-4",
-    "scopeId": "spi",
-    "materiId": "spi-4",
-    "soal": "Mengapa Al-Qur'an disebut sebagai mukjizat yang abadi dan cocok untuk semua zaman, berbeda dengan mukjizat para nabi sebelumnya yang bersifat fisik?",
-    "pilihan": [
-      "A. Karena Al-Qur'an hanya bisa dibaca oleh orang-orang pilihan Allah.",
-      "B. Karena Al-Qur'an adalah mukjizat maknawi yang kebenarannya dapat dibuktikan akal budi sepanjang masa.",
-      "C. Karena Al-Qur'an diturunkan kepada nabi terakhir sehingga lebih istimewa.",
-      "D. Karena Al-Qur'an memiliki banyak kisah nabi dan rasul yang menarik."
-    ],
-    "kunciJawaban": "B",
-    "pembahasan": "Al-Qur'an adalah mukjizat maknawi (aqli) yang kebenarannya teruji oleh akal budi di setiap zaman, berbeda dengan mukjizat hissi yang terbatas pada masanya.",
-    "wigginsFacet": "Perspektif",
-    "level": "Sedang"
-  },
-  {
-    "id": "mq-spi-4-5",
-    "scopeId": "spi",
-    "materiId": "spi-4",
-    "soal": "Firaun adalah raja yang kejam dan sombong, namun ia diberikan kekuatan dan kekuasaan yang sangat besar. Meskipun demikian, kekuasaan tersebut justru membawanya semakin jauh dari kebenaran dan berakhir dengan kebinasaan. Kondisi yang dialami Firaun ini dalam ajaran Islam dinamakan...",
-    "pilihan": [
-      "A. Karamah",
-      "B. Mukjizat",
-      "C. Istidraj",
-      "D. Ma'unah"
-    ],
-    "kunciJawaban": "C",
-    "pembahasan": "Istidraj adalah kehebatan atau kemudahan semu yang diberikan kepada orang kafir/maksiat agar semakin terperosok dalam kesesatan.",
-    "wigginsFacet": "Aplikasi",
-    "level": "HOTS"
   },
   {
     "id": "mq-spi-5-1",
