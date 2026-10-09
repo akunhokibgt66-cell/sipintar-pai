@@ -2,16 +2,17 @@ import React, { useMemo, useState } from 'react';
 import { CheckCircle2, XCircle, RotateCcw, ClipboardCheck } from 'lucide-react';
 import { MateriItem } from '../types';
 import { quizBank } from '../data/quizBank';
+import { materiQuizBank } from '../data/materiQuizBank';
 import { sounds } from '../utils/audio';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 
 export const LatihanMateri: React.FC<{ materi: MateriItem }> = ({ materi }) => {
   const questions = useMemo(() => {
-    const own = quizBank.filter((q) => q.materiId === materi.id);
-    const scope = quizBank.filter((q) => q.scopeId === materi.scopeId && q.materiId !== materi.id);
-    return [...own, ...scope].slice(0, 5);
-  }, [materi.id, materi.scopeId]);
+    const own = materiQuizBank.filter((q) => q.materiId === materi.id);
+    if (own.length > 0) return own;
+    return quizBank.filter((q) => q.materiId === materi.id).slice(0, 5);
+  }, [materi.id]);
 
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
