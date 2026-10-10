@@ -38,16 +38,65 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
   const [answers, setAnswers] = useState<{ [index: number]: number }>({});
   const [doubtStatus, setDoubtStatus] = useState<{ [index: number]: boolean }>({});
   const [isFinished, setIsFinished] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(7200); // 120 menit untuk 100 soal
+  const [timeLeft, setTimeLeft] = useState(5400); // 90 menit untuk 100 soal
   const [isTimerActive, setIsTimerActive] = useState(true);
+  const [cheatWarnings, setCheatWarnings] = useState(0);
+  const [cheatMessage, setCheatMessage] = useState<string | null>(null);
   const [studentName, setStudentName] = useState(propStudentName || 'Santri Berprestasi');
   const [schoolName, setSchoolName] = useState(propSchoolName || 'SD Unggulan');
   const [showCertificate, setShowCertificate] = useState(false);
 
+  const shuffleQuestions = () => {
+    // Acak urutan soal DAN urutan pilihan jawaban (anti contek)
+    const shuffled = [...cbtBank].sort(() => Math.random() - 0.5).map(q => {
+      const order = q.pilihan.map((_, i) => i).sort(() => Math.random() - 0.5);
+      return {
+        ...q,
+        pilihan: order.map(i => q.pilihan[i]),
+        kunciJawaban: order.indexOf(q.kunciJawaban),
+      };
+    });
+    setQuestions(shuffled);
+  };
+
   useEffect(() => {
-    // Shuffle or load questions
-    setQuestions([...cbtBank].sort(() => Math.random() - 0.5));
+    shuffleQuestions();
   }, []);
+
+  // Anti contek: deteksi pindah tab/aplikasi & blokir copy-paste
+  useEffect(() => {
+    if (isFinished) return;
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        setCheatWarnings(prev => {
+          const next = prev + 1;
+          if (next >= 3) {
+            setCheatMessage('Ujian dikumpulkan otomatis karena berulang kali meninggalkan halaman ujian.');
+            handleSubmitExam();
+          } else {
+            setCheatMessage(`Peringatan ${next}/3: Jangan meninggalkan halaman ujian!`);
+          }
+          return next;
+        });
+      }
+    };
+
+    const blockCopy = (e: Event) => e.preventDefault();
+    const blockContext = (e: Event) => e.preventDefault();
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    document.addEventListener('copy', blockCopy);
+    document.addEventListener('cut', blockCopy);
+    document.addEventListener('contextmenu', blockContext);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibility);
+      document.removeEventListener('copy', blockCopy);
+      document.removeEventListener('cut', blockCopy);
+      document.removeEventListener('contextmenu', blockContext);
+    };
+  }, [isFinished, questions, answers]);
 
   useEffect(() => {
     if (!isTimerActive || isFinished) return;
@@ -116,9 +165,12 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
     setDoubtStatus({});
     setCurrentIndex(0);
     setIsFinished(false);
-    setTimeLeft(7200);
+    setTimeLeft(5400);
     setIsTimerActive(true);
     setShowCertificate(false);
+    setCheatWarnings(0);
+    setCheatMessage(null);
+    shuffleQuestions();
     sounds.playClick();
   };
 
