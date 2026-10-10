@@ -13,7 +13,7 @@ import {
   Printer,
   X
 } from 'lucide-react';
-import { quizBank } from '../data/quizBank';
+import { cbtBank } from '../data/cbtBank';
 import { QuizQuestion, RuangLingkupId } from '../types';
 import { sounds } from '../utils/audio';
 import confetti from 'canvas-confetti';
@@ -38,7 +38,7 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
   const [answers, setAnswers] = useState<{ [index: number]: number }>({});
   const [doubtStatus, setDoubtStatus] = useState<{ [index: number]: boolean }>({});
   const [isFinished, setIsFinished] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(900); // 15 minutes = 900 seconds
+  const [timeLeft, setTimeLeft] = useState(7200); // 120 menit untuk 100 soal
   const [isTimerActive, setIsTimerActive] = useState(true);
   const [studentName, setStudentName] = useState(propStudentName || 'Santri Berprestasi');
   const [schoolName, setSchoolName] = useState(propSchoolName || 'SD Unggulan');
@@ -46,7 +46,7 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
 
   useEffect(() => {
     // Shuffle or load questions
-    setQuestions([...quizBank]);
+    setQuestions([...cbtBank].sort(() => Math.random() - 0.5));
   }, []);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
     setDoubtStatus({});
     setCurrentIndex(0);
     setIsFinished(false);
-    setTimeLeft(900);
+    setTimeLeft(7200);
     setIsTimerActive(true);
     setShowCertificate(false);
     sounds.playClick();
