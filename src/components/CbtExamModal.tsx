@@ -218,6 +218,19 @@ export const CbtExamModal: React.FC<CbtExamModalProps> = ({
         )}
       </div>
 
+      {/* Peringatan Anti Contek */}
+      {cheatMessage && !isFinished && (
+        <div className="p-4 rounded-2xl bg-rose-50 border-2 border-rose-300 text-rose-800 text-sm font-bold flex items-center justify-between gap-3 animate-pulse">
+          <span>⚠️ {cheatMessage}</span>
+          <button
+            onClick={() => setCheatMessage(null)}
+            className="px-3 py-1 rounded-lg bg-rose-600 text-white text-xs font-black cursor-pointer shrink-0"
+          >
+            Saya Mengerti
+          </button>
+        </div>
+      )}
+
       {!isFinished ? (
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Main Question Panel (3 cols) */}
