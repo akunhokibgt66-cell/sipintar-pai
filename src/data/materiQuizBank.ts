@@ -435,6 +435,22 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Sedang"
   },
   {
+    "id": "mq-quran-6-3",
+    "scopeId": "quran",
+    "materiId": "quran-6",
+    "soal": "Kisah kehancuran pasukan bergajah Abrahah yang sombong memberikan pelajaran berharga bagi kita. Sikap apa yang seharusnya kita hindari dalam pergaulan sehari-hari berdasarkan hikmah Surah Al-Fīl?",
+    "pilihan": [
+      "Bekerja sama dengan teman dalam menjaga kebersihan mushala sekolah.",
+      "Membanggakan kekuatan fisik atau kekayaan untuk meremehkan dan merundung (bully) teman yang lemah.",
+      "Memelihara hewan peliharaan dengan penuh kasih sayang.",
+      "Berdoa memohon perlindungan Allah sebelum berangkat ke sekolah."
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Nasib Abrahah membuktikan bahwa kekuatan fisik dan keangkuhan manusia tidak ada artinya di hadapan kekuasaan Allah SWT, sehingga kita dilarang bersikap sombong atau menindas yang lemah.",
+    "wigginsFacet": "Refleksi",
+    "level": "HOTS"
+  },
+  {
     "id": "mq-quran-6-4",
     "scopeId": "quran",
     "materiId": "quran-6",
@@ -963,6 +979,70 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Mudah"
   },
   {
+    "id": "mq-quran-13-2",
+    "scopeId": "quran",
+    "materiId": "quran-13",
+    "soal": "Dalam sejarah dakwah Islam, Rasulullah SAW mencantumkan kutipan Surah Āli ‘Imrān ayat 64 di dalam surat resmi diplomasi yang beliau kirimkan kepada penguasa besar dunia, di antaranya adalah...",
+    "pilihan": [
+      "Kaisar Heraclius dari Romawi dan Mukaukis dari Mesir",
+      "Raja Abrahah dari Yaman dan Raja Namrud dari Babilonia",
+      "Raja Firaun dari Mesir dan Raja Jalut dari Palestina",
+      "Kaisar Tiongkok dan Maharaja India"
+    ],
+    "kunciJawaban": 0,
+    "pembahasan": "Surah Āli ‘Imrān ayat 64 dicantumkan oleh Nabi Muhammad SAW dalam surat dakwah diplomasi kepada para penguasa Ahli Kitab seperti Kaisar Heraclius dari Romawi dan Mukaukis dari Mesir.",
+    "wigginsFacet": "Penjelasan",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-quran-13-3",
+    "scopeId": "quran",
+    "materiId": "quran-13",
+    "soal": "Berikut ini yang termasuk tiga isi pokok kesepakatan 'Kalimatun Sawa’' dalam Surah Āli ‘Imrān ayat 64 adalah...",
+    "pilihan": [
+      "Menyatukan seluruh tata cara ibadah ritual semua agama menjadi satu",
+      "Tidak menyembah selain Allah, tidak mempersekutukan-Nya, dan tidak menjadikan sesama manusia sebagai tuhan selain Allah",
+      "Menghapus seluruh perbedaan bahasa dan suku bangsa di dunia",
+      "Mewajibkan seluruh manusia tinggal di kota yang sama"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Tiga prinsip Kalimatun Sawa' dalam QS. Āli ‘Imrān: 64 adalah: hanya menyembah Allah, tidak menyekutukan-Nya dengan sesuatu pun, dan tidak mengangkat sesama manusia sebagai tuhan tandingan (arbāban min dūnillāh).",
+    "wigginsFacet": "Interpretasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-quran-13-4",
+    "scopeId": "quran",
+    "materiId": "quran-13",
+    "soal": "Bagaimana cara seorang pelajar muslim menerapkan metode 'Kalimatun Sawa’' ketika berinteraksi dengan teman atau tetangga yang berbeda agama?",
+    "pilihan": [
+      "Mengajak berdebat kusir setiap hari untuk mencari siapa yang kalah",
+      "Mengedepankan titik temu kebaikan bersama seperti kerja bakti sosial dan bersikap santun tanpa mengorbankan akidah",
+      "Menjauhi dan menolak berbicara dengan tetangga yang berbeda keyakinan",
+      "Mengikuti ritual ibadah agama mereka agar dianggap rukun"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Metode dialog dalam QS. Āli ‘Imrān: 64 mengajarkan kita mengedepankan titik persamaan dalam kebaikan dan keadilan sosial secara santun sambil tetap menjaga kemurnian tauhid.",
+    "wigginsFacet": "Aplikasi",
+    "level": "HOTS"
+  },
+  {
+    "id": "mq-quran-13-5",
+    "scopeId": "quran",
+    "materiId": "quran-13",
+    "soal": "Di akhir Surah Āli ‘Imrān ayat 64 disebutkan: 'Fa in tawallau fa qūlusy-hadū bi’annā muslimūn' (Jika mereka berpaling, maka katakanlah: Saksikanlah bahwa kami adalah orang-orang muslim). Pesan sikap yang terkandung dalam penutup ayat ini adalah...",
+    "pilihan": [
+      "Jika ajakan kebaikan ditolak, kita boleh memusuhi dan memerangi mereka",
+      "Jika pihak lain menolak, kita tetap tenang, tidak memaksa, namun tegas mempertahankan jati diri sebagai muslim yang berserah diri kepada Allah",
+      "Kita harus ikut berpaling agar tidak ditinggalkan oleh teman-teman",
+      "Kita harus menyembunyikan identitas keislaman kita di depan umum"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Penutup ayat ini mengajarkan keteguhan identitas dan kedewasaan sikap: apabila ajakan ditolak, seorang muslim tidak boleh anarkis atau memaksa, melainkan tetap teguh menyatakan keislamannya.",
+    "wigginsFacet": "Perspektif",
+    "level": "HOTS"
+  },
+  {
     "id": "mq-quran-14-1",
     "scopeId": "quran",
     "materiId": "quran-14",
@@ -1008,6 +1088,22 @@ export const materiQuizBank: QuizQuestion[] = [
     "kunciJawaban": 1,
     "pembahasan": "Prinsip 'Lā ikrāha fid-dīn' mengajarkan untuk tidak memaksa, melainkan memberikan contoh baik dan penjelasan.",
     "wigginsFacet": "Aplikasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-quran-14-4",
+    "scopeId": "quran",
+    "materiId": "quran-14",
+    "soal": "Dalam Surah Al-Baqarah ayat 256 disebutkan 'Qad tabayyanar-rusydu minal-ghayy'. Apakah arti dari kata 'Ar-Rusydu' dan 'Al-Ghayy' pada potongan ayat tersebut?",
+    "pilihan": [
+      "Ar-Rusydu berarti kekayaan, sedangkan Al-Ghayy berarti kemiskinan",
+      "Ar-Rusydu berarti jalan yang benar (petunjuk), sedangkan Al-Ghayy berarti jalan yang sesat",
+      "Ar-Rusydu berarti kekuatan fisik, sedangkan Al-Ghayy berarti kelemahan",
+      "Ar-Rusydu berarti kehidupan dunia, sedangkan Al-Ghayy berarti kehidupan akhirat"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Lafaz 'Ar-Rusydu' berarti jalan kebenaran atau petunjuk iman, sedangkan 'Al-Ghayy' berarti jalan kesesatan atau kekufuran yang telah jelas perbedaannya.",
+    "wigginsFacet": "Penjelasan",
     "level": "Sedang"
   },
   {
@@ -1955,6 +2051,22 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "HOTS"
   },
   {
+    "id": "mq-akhlak-4-4",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-4",
+    "soal": "Kewajiban berbakti kepada kedua orang tua (birrul wālidain) tetap berlanjut meskipun orang tua telah wafat. Berikut ini yang merupakan wujud berbakti kepada orang tua yang sudah meninggal dunia adalah...",
+    "pilihan": [
+      "Meratapi kepergian mereka secara berlebihan setiap hari",
+      "Mendoakan ampunan bagi keduanya, bersedekah atas nama mereka, dan menyambung silaturahmi dengan kerabat atau sahabat orang tua",
+      "Menyimpan seluruh pakaian orang tua dan melarang siapa pun menyentuhnya",
+      "Berhenti belajar karena sudah tidak ada lagi orang tua yang mengawasi"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Cara berbakti setelah orang tua wafat adalah mendoakan ampunan mereka (Rabbighfirlī waliwālidayya), bersedekah atas nama mereka, serta menyambung tali silaturahmi dengan sahabat dan kerabat orang tua.",
+    "wigginsFacet": "Aplikasi",
+    "level": "Sedang"
+  },
+  {
     "id": "mq-akhlak-4-5",
     "scopeId": "akhlak",
     "materiId": "akhlak-4",
@@ -2451,6 +2563,86 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "HOTS"
   },
   {
+    "id": "mq-akhlak-11-1",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-11",
+    "soal": "Dalam Surah Ibrahim ayat 24-25, Allah SWT mengumpamakan 'Kalimah Ṭayyibah' (ucapan yang baik) seperti...",
+    "pilihan": [
+      "Gunung batu yang keras dan tinggi menjulang",
+      "Pohon yang baik, akarnya teguh menghunjam ke bumi dan cabangnya menjulang ke langit serta memberikan buahnya setiap musim",
+      "Air hujan yang turun deras lalu mengalir ke lautan",
+      "Cahaya pelita di tengah padang pasir yang gelap"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Dalam QS. Ibrahim: 24-25, kalimah thayyibah diibaratkan seperti pohon yang baik (syajaratin thayyibah) yang akarnya kokoh dan cabangnya menjulang ke langit serta menghasilkan buah manfaat setiap waktu.",
+    "wigginsFacet": "Penjelasan",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-akhlak-11-2",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-11",
+    "soal": "Ketika kamu sedang berwisata ke pegunungan dan melihat pemandangan alam yang sangat indah serta memesona, kalimat thayyibah yang paling tepat diucapkan sebagai bentuk ketakjuban atas ciptaan Allah adalah...",
+    "pilihan": [
+      "Innā lillāhi wa innā ilaihi rāji‘ūn",
+      "Astaghfirullāhal-‘aẓīm",
+      "Māsya Allāh (atau Māsya Allāh Tabārakallāh)",
+      "Lā ḥaula wa lā quwwata illā billāh"
+    ],
+    "kunciJawaban": 2,
+    "pembahasan": "Kalimat 'Māsya Allāh' (Atas kehendak Allah semua ini terjadi) diucapkan saat takjub melihat keindahan ciptaan Allah atau kelebihan/nikmat pada diri orang lain.",
+    "wigginsFacet": "Aplikasi",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-akhlak-11-3",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-11",
+    "soal": "Saat mendengar kabar duka atau ketika tertimpa musibah seperti terjatuh dari sepeda, seorang muslim dianjurkan mengucapkan kalimat Istirjā‘ (Tarjī‘) yang berbunyi...",
+    "pilihan": [
+      "Subḥānallāhi wa biḥamdih",
+      "Innā lillāhi wa innā ilaihi rāji‘ūn",
+      "Al-ḥamdu lillāhi rabbil-‘ālamīn",
+      "Bismillāhi tawakkaltu ‘alallāh"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Kalimat Istirjā‘ berbunyi 'Innā lillāhi wa innā ilaihi rāji‘ūn' (Sesungguhnya kami milik Allah dan kepada-Nyalah kami kembali), diucapkan saat tertimpa musibah.",
+    "wigginsFacet": "Penjelasan",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-akhlak-11-4",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-11",
+    "soal": "Kalimat Ḥauqalah ('Lā ḥaula wa lā quwwata illā billāh') disebut oleh Rasulullah SAW sebagai salah satu perbendaharaan (simpanan harta) surga. Apa makna mendalam dari mengucapkan kalimat tersebut saat kita menghadapi beban atau kesulitan berat?",
+    "pilihan": [
+      "Menunjukkan bahwa manusia bebas melakukan apa saja dengan kekuatannya sendiri",
+      "Menyadari bahwa manusia tidak memiliki daya untuk menolak keburukan dan kekuatan untuk meraih kebaikan kecuali dengan pertolongan Allah SWT",
+      "Menyerah tanpa perlu berusaha dan berdoa lagi",
+      "Meminta orang lain untuk menyelesaikan seluruh tanggung jawab kita"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Kalimat Ḥauqalah adalah pengakuan tulus seorang hamba bahwa tiada daya dan kekuatan kecuali dengan pertolongan Allah SWT, sehingga melahirkan ketawakalan yang kokoh.",
+    "wigginsFacet": "Interpretasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-akhlak-11-5",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-11",
+    "soal": "Rafi berjanji kepada temannya untuk datang belajar kelompok besok sore. Sesuai petunjuk Surah Al-Kahfi ayat 23-24, mengapa Rafi wajib menyertakan ucapan 'Insyā Allāh' ketika mengucapkan janji tersebut?",
+    "pilihan": [
+      "Agar Rafi bebas membatalkan janjinya kapan saja meskipun tidak ada halangan",
+      "Sebagai basa-basi supaya temannya tidak terlalu berharap Rafi datang",
+      "Sebagai bentuk adab dan kesadaran bahwa manusia hanya bisa berencana dan berusaha, sedangkan terlaksananya sesuatu di masa depan bergantung pada izin Allah SWT",
+      "Karena mengucapkan Insyā Allāh membuat janji tidak perlu ditepati"
+    ],
+    "kunciJawaban": 2,
+    "pembahasan": "Mengucapkan 'Insyā Allāh' saat berjanji adalah perintah Allah dalam QS. Al-Kahfi: 23-24 sebagai wujud kerendahan hati bahwa segala rencana masa depan berada di bawah kehendak Allah, sembari tetap berkomitmen menepatinya.",
+    "wigginsFacet": "Refleksi",
+    "level": "HOTS"
+  },
+  {
     "id": "mq-akhlak-12-1",
     "scopeId": "akhlak",
     "materiId": "akhlak-12",
@@ -2497,6 +2689,22 @@ export const materiQuizBank: QuizQuestion[] = [
     "pembahasan": "Menyemangati teman untuk belajar lebih giat adalah bentuk pertolongan yang benar, sedangkan menyontek dilarang dalam Islam.",
     "wigginsFacet": "Perspektif",
     "level": "HOTS"
+  },
+  {
+    "id": "mq-akhlak-12-4",
+    "scopeId": "akhlak",
+    "materiId": "akhlak-12",
+    "soal": "Warga desa sedang mengadakan kerja bakti membersihkan selokan menjelang musim hujan, sementara OSIS/pengurus kelas menggalang donasi untuk korban banjir. Kedua kegiatan tersebut berturut-turut merupakan wujud At-Ta‘āwun dalam bentuk...",
+    "pilihan": [
+      "Tenaga dan harta",
+      "Ilmu dan jabatan",
+      "Doa dan pujian",
+      "Perdebatan dan persaingan"
+    ],
+    "kunciJawaban": 0,
+    "pembahasan": "Kerja bakti membersihkan selokan adalah wujud tolong-menolong dengan tenaga, sedangkan menggalang donasi untuk korban bencana adalah wujud tolong-menolong dengan harta.",
+    "wigginsFacet": "Empati",
+    "level": "Sedang"
   },
   {
     "id": "mq-akhlak-12-5",
@@ -3331,6 +3539,70 @@ export const materiQuizBank: QuizQuestion[] = [
     "level": "Mudah"
   },
   {
+    "id": "mq-fiqih-8-2",
+    "scopeId": "fiqih",
+    "materiId": "fiqih-8",
+    "soal": "Dalam Surah Ar-Ra‘d ayat 28 disebutkan: 'Alā biżikrillāhi taṭma’innul-qulūb'. Apakah arti dari potongan ayat tentang keutamaan zikir tersebut?",
+    "pilihan": [
+      "Ingatlah, dengan berzikir harta akan menjadi berlipat ganda",
+      "Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram",
+      "Ingatlah, orang yang berzikir tidak perlu lagi bekerja keras",
+      "Ingatlah, zikir hanya wajib dibaca pada bulan Ramadan"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "QS. Ar-Ra‘d ayat 28 menegaskan bahwa zikir adalah penawar kegelisahan batin: 'Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram.'",
+    "wigginsFacet": "Penjelasan",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-fiqih-8-3",
+    "scopeId": "fiqih",
+    "materiId": "fiqih-8",
+    "soal": "Dalam hadis shahih riwayat Imam Bukhari, Rasulullah SAW mengumpamakan perbedaan antara orang yang rajin berzikir mengingat Tuhannya dan orang yang lalai tidak berzikir seperti...",
+    "pilihan": [
+      "Perumpamaan pedagang kaya dan petani sederhana",
+      "Perumpamaan orang yang hidup dan orang yang mati (bangkai)",
+      "Perumpamaan musim hujan dan musim kemarau",
+      "Perumpamaan gunung tinggi dan lembah yang curam"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Rasulullah SAW bersabda: 'Perumpamaan orang yang berzikir kepada Tuhannya dan orang yang tidak berzikir adalah bagaikan orang yang hidup dan orang yang mati.' (HR. Bukhari).",
+    "wigginsFacet": "Interpretasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-fiqih-8-4",
+    "scopeId": "fiqih",
+    "materiId": "fiqih-8",
+    "soal": "Zikir tidak hanya dilakukan dengan lisan, tetapi juga dengan hati (Zikir Qalbi) dan perbuatan (Zikir Amali). Berikut ini yang merupakan contoh penerapan 'Zikir Amali' seorang siswa di sekolah adalah...",
+    "pilihan": [
+      "Menghitung biji tasbih sambil melamun saat guru menjelaskan pelajaran",
+      "Menuntut ilmu dengan tekun, menaati tata tertib, dan menolong teman karena Allah SWT",
+      "Tidur di dalam kelas sepanjang jam pelajaran berlangsung",
+      "Membaca zikir dengan suara berteriak keras di tengah perpustakaan"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Zikir Amali (perbuatan) adalah mengingat Allah dengan cara melaksanakan segala perintah-Nya dan beramal saleh, seperti tekun menuntut ilmu dan berbuat baik kepada sesama.",
+    "wigginsFacet": "Aplikasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-fiqih-8-5",
+    "scopeId": "fiqih",
+    "materiId": "fiqih-8",
+    "soal": "Menjelang ujian sekolah, Nabila merasa hatinya gelisah dan cemas meskipun ia sudah belajar dengan sungguh-sungguh. Berdasarkan pemahaman tentang fungsi zikir, mengapa memperbanyak istigfar dan zikir dapat membantu Nabila mengatasi kecemasannya?",
+    "pilihan": [
+      "Karena dengan berzikir seluruh soal ujian akan berubah menjadi sangat mudah tanpa perlu dipikirkan",
+      "Karena zikir menghubungkan fitrah jiwa manusia dengan Allah Sang Pencipta sehingga menghadirkan ketenangan batin dan keyakinan atas pertolongan-Nya",
+      "Karena zikir dapat menggantikan kewajiban belajar di rumah",
+      "Karena guru akan langsung memberikan nilai seratus kepada siswa yang cemas"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Fitrah ruh manusia hanya dapat merasakan ketenteraman sejati ketika terhubung dengan Penciptanya melalui zikir dan doa setelah berikhtiar maksimal.",
+    "wigginsFacet": "Refleksi",
+    "level": "HOTS"
+  },
+  {
     "id": "mq-fiqih-9-1",
     "scopeId": "fiqih",
     "materiId": "fiqih-9",
@@ -3896,10 +4168,10 @@ export const materiQuizBank: QuizQuestion[] = [
     "materiId": "spi-3",
     "soal": "Nabi yang dikenal sebagai 'Bapak Para Nabi' dan memiliki mukjizat menghancurkan berhala Raja Namrud adalah...",
     "pilihan": [
-      "A. Nabi Nuh a.s.",
-      "B. Nabi Ibrahim a.s.",
-      "C. Nabi Yusuf a.s.",
-      "D. Nabi Musa a.s."
+      "Nabi Nuh a.s.",
+      "Nabi Ibrahim a.s.",
+      "Nabi Yusuf a.s.",
+      "Nabi Musa a.s."
     ],
     "kunciJawaban": 1,
     "pembahasan": "Nabi Ibrahim a.s. dijuluki Bapak Para Nabi dan mukjizatnya adalah menghancurkan berhala Raja Namrud. Ini menunjukkan keteguhan beliau dalam berdakwah tauhid.",
@@ -3912,10 +4184,10 @@ export const materiQuizBank: QuizQuestion[] = [
     "materiId": "spi-3",
     "soal": "Seorang nabi yang terkenal karena kesabarannya yang luar biasa dalam menghadapi penyakit dan kehilangan harta benda serta keluarga adalah Nabi Ayyub a.s. Dari kisah beliau, pelajaran apa yang bisa kita ambil dalam menghadapi musibah?",
     "pilihan": [
-      "A. Mengeluh kepada orang lain agar mendapat simpati.",
-      "B. Berusaha mencari pertolongan kepada dukun atau hal gaib.",
-      "C. Tetap berprasangka baik kepada Allah dan bersabar atas cobaan-Nya.",
-      "D. Menyalahkan takdir dan menyerah pada keadaan."
+      "Mengeluh kepada orang lain agar mendapat simpati.",
+      "Berusaha mencari pertolongan kepada dukun atau hal gaib.",
+      "Tetap berprasangka baik kepada Allah dan bersabar atas cobaan-Nya.",
+      "Menyalahkan takdir dan menyerah pada keadaan."
     ],
     "kunciJawaban": 2,
     "pembahasan": "Kisah Nabi Ayyub a.s. mengajarkan kita untuk selalu bersabar dan berprasangka baik kepada Allah SWT dalam menghadapi segala cobaan hidup. Kesabaran adalah kunci melewati musibah.",
@@ -3928,10 +4200,10 @@ export const materiQuizBank: QuizQuestion[] = [
     "materiId": "spi-3",
     "soal": "Nabi Yunus a.s. pernah ditelan ikan paus. Dalam tiga kegelapan (perut ikan, dasar laut, dan malam hari), beliau berdoa. Apa isi doa Nabi Yunus a.s. yang disebutkan dalam Al-Qur'an dan menjadi inspirasi bagi kita saat dalam kesulitan?",
     "pilihan": [
-      "A. 'Hasbunallah wa ni'mal wakil'",
-      "B. 'Rabbana atina fid dunya hasanah'",
-      "C. 'La ilaha illa anta subhanaka inni kuntu minaz zalimin'",
-      "D. 'Allahumma inni as'aluka ilman nafi'an'"
+      "'Hasbunallah wa ni'mal wakil'",
+      "'Rabbana atina fid dunya hasanah'",
+      "'La ilaha illa anta subhanaka inni kuntu minaz zalimin'",
+      "'Allahumma inni as'aluka ilman nafi'an'"
     ],
     "kunciJawaban": 2,
     "pembahasan": "Doa Nabi Yunus a.s. di perut ikan paus adalah 'Lā ilāha illā anta subḥānaka innī kuntu minaẓ-ẓālimīn'. Doa ini mengandung pengakuan tauhid dan penyesalan atas kesalahan.",
@@ -3944,10 +4216,10 @@ export const materiQuizBank: QuizQuestion[] = [
     "materiId": "spi-3",
     "soal": "Nabi Daud a.s. memiliki mukjizat bisa melunakkan besi tanpa api dan suara yang sangat merdu saat membaca Kitab Zabur. Jika kita diamanahi sebuah kemampuan khusus oleh Allah, seperti bersuara merdu atau cerdas dalam ilmu tertentu, bagaimana seharusnya sikap kita terhadap kemampuan tersebut?",
     "pilihan": [
-      "A. Menggunakannya untuk pamer agar dipuji banyak orang.",
-      "B. Merahasiakannya agar tidak ada yang menyaingi.",
-      "C. Memanfaatkan untuk hal-hal yang tidak penting dan bersenang-senang semata.",
-      "D. Bersyukur dan menggunakannya di jalan Allah untuk kebaikan sesama."
+      "Menggunakannya untuk pamer agar dipuji banyak orang.",
+      "Merahasiakannya agar tidak ada yang menyaingi.",
+      "Memanfaatkan untuk hal-hal yang tidak penting dan bersenang-senang semata.",
+      "Bersyukur dan menggunakannya di jalan Allah untuk kebaikan sesama."
     ],
     "kunciJawaban": 3,
     "pembahasan": "Sikap yang benar adalah bersyukur kepada Allah atas karunia kemampuan dan menggunakannya untuk kebaikan serta di jalan-Nya. Kita harus mengikuti teladan para nabi.",
@@ -3960,15 +4232,95 @@ export const materiQuizBank: QuizQuestion[] = [
     "materiId": "spi-3",
     "soal": "Perhatikan daftar nama nabi berikut:\n1. Nabi Nuh a.s.\n2. Nabi Hud a.s.\n3. Nabi Saleh a.s.\n4. Nabi Luth a.s.\n5. Nabi Syu'aib a.s.\n\nJika Nabi Hud a.s. diutus kepada kaum 'Ad dan Nabi Saleh a.s. diutus kepada kaum Tsamud, kepada kaum mana Nabi Syu'aib a.s. diutus dan apa perilaku buruk mereka yang diluruskan?",
     "pilihan": [
-      "A. Kaum Sodom, berperilaku menyimpang.",
-      "B. Kaum Madyan, curang dalam timbangan.",
-      "C. Kaum Saba', ingkar nikmat Allah.",
-      "D. Kaum Quraisy, menyembah berhala."
+      "Kaum Sodom, berperilaku menyimpang.",
+      "Kaum Madyan, curang dalam timbangan.",
+      "Kaum Saba', ingkar nikmat Allah.",
+      "Kaum Quraisy, menyembah berhala."
     ],
     "kunciJawaban": 1,
     "pembahasan": "Nabi Syu'aib a.s. diutus kepada kaum Madyan yang memiliki kebiasaan curang dalam timbangan dan takaran. Beliau menyeru mereka untuk berlaku jujur.",
     "wigginsFacet": "Interpretasi",
     "level": "Sedang"
+  },
+  {
+    "id": "mq-spi-4-1",
+    "scopeId": "spi",
+    "materiId": "spi-4",
+    "soal": "Secara bahasa, kata 'Mukjizat' berasal dari bahasa Arab 'a-ja-za yang berarti...",
+    "pilihan": [
+      "Menyembunyikan sesuatu",
+      "Melemahkan atau mengalahkan lawan yang menentang",
+      "Memperbanyak harta benda",
+      "Menyembuhkan penyakit jasmani"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Mukjizat berasal dari kata 'a-ja-za yang berarti melemahkan, yakni kejadian luar biasa dari Allah pada diri rasul untuk membuktikan kebenaran kenabian dan melemahkan argumen para penentang.",
+    "wigginsFacet": "Penjelasan",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-spi-4-2",
+    "scopeId": "spi",
+    "materiId": "spi-4",
+    "soal": "Kejadian luar biasa yang diberikan Allah SWT kepada seorang wali Allah (hamba yang sangat saleh dan bertakwa, namun bukan nabi/rasul) disebut dengan istilah...",
+    "pilihan": [
+      "Mukjizat",
+      "Karamah",
+      "Istidraj",
+      "Sihir"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Kejadian luar biasa pada nabi/rasul disebut Mukjizat, pada wali Allah disebut Karamah, pertolongan bagi mukmin biasa disebut Ma'unah, sedangkan kemudahan semu bagi orang kafir/durhaka disebut Istidraj.",
+    "wigginsFacet": "Penjelasan",
+    "level": "Mudah"
+  },
+  {
+    "id": "mq-spi-4-3",
+    "scopeId": "spi",
+    "materiId": "spi-4",
+    "soal": "Mukjizat dibagi menjadi dua jenis, yaitu Mukjizat Hissi (indrawi/fisik) dan Mukjizat Maknawi/Aqli (rasional dan abadi). Berikut ini yang merupakan contoh Mukjizat Maknawi adalah...",
+    "pilihan": [
+      "Tongkat Nabi Musa a.s. yang membelah Laut Merah",
+      "Api yang menjadi dingin ketika membakar Nabi Ibrahim a.s.",
+      "Kitab Suci Al-Qur'an yang diturunkan kepada Nabi Muhammad SAW",
+      "Unta betina yang keluar dari batu karang pada masa Nabi Saleh a.s."
+    ],
+    "kunciJawaban": 2,
+    "pembahasan": "Kitab Suci Al-Qur'an adalah Mukjizat Maknawi/Aqli terbesar Nabi Muhammad SAW karena keaslian dan kebenaran ilmiahnya dapat dibuktikan oleh akal manusia sepanjang zaman hingga hari kiamat.",
+    "wigginsFacet": "Interpretasi",
+    "level": "Sedang"
+  },
+  {
+    "id": "mq-spi-4-4",
+    "scopeId": "spi",
+    "materiId": "spi-4",
+    "soal": "Mengapa mukjizat yang dianugerahkan Allah SWT kepada setiap rasul selalu berbeda-beda sesuai dengan keadaan kaum pada zamannya, seperti mukjizat tongkat Nabi Musa a.s. di zaman Firaun dan mukjizat penyembuhan Nabi Isa a.s. di zaman Romawi?",
+    "pilihan": [
+      "Agar para nabi dapat saling membanggakan kehebatan mukjizatnya masing-masing",
+      "Untuk mematahkan keahlian tertinggi yang paling dibanggakan oleh kaum pada zaman tersebut sehingga mereka sadar bahwa mukjizat itu murni dari kekuasaan Allah SWT",
+      "Karena masyarakat zaman dahulu hanya menyukai pertunjukan hiburan semata",
+      "Supaya para rasul dapat mengumpulkan kekayaan dari masyarakat"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Mukjizat para rasul selaras dengan keunggulan zamannya (sihir di masa Nabi Musa, ilmu tabib/medis di masa Nabi Isa, dan sastra bahasa di masa Nabi Muhammad SAW) guna membuktikan bahwa mukjizat tersebut melampaui kemampuan manusia dan berasal dari Allah SWT.",
+    "wigginsFacet": "Perspektif",
+    "level": "HOTS"
+  },
+  {
+    "id": "mq-spi-4-5",
+    "scopeId": "spi",
+    "materiId": "spi-4",
+    "soal": "Sebagaimana ditegaskan dalam Surah Al-Isra' ayat 88, Al-Qur'an adalah mukjizat abadi yang masih dapat kita saksikan hingga hari ini. Sikap terbaik seorang pelajar muslim dalam memuliakan mukjizat Al-Qur'an adalah...",
+    "pilihan": [
+      "Menyimpan mushaf Al-Qur'an di lemari tinggi sebagai pajangan tanpa pernah dibaca",
+      "Rutin membaca, menghafal, mempelajari maknanya, serta mengamalkan akhlak Al-Qur'an dalam kehidupan sehari-hari",
+      "Hanya membaca Al-Qur'an ketika sedang mengikuti perlombaan saja",
+      "Menganggap Al-Qur'an hanya cocok untuk dipelajari oleh orang dewasa"
+    ],
+    "kunciJawaban": 1,
+    "pembahasan": "Wujud syukur dan keimanan atas mukjizat Al-Qur'an adalah dengan membacanya secara tartil, mentadabburi isinya, serta mengamalkan ajarannya dalam perilaku sehari-hari.",
+    "wigginsFacet": "Aplikasi",
+    "level": "HOTS"
   },
   {
     "id": "mq-spi-5-1",
